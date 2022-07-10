@@ -92,8 +92,3 @@ SSLPinning BYPASSED!!
 
 Enjoy!! 
 
- 
-
- 
-
-frida --codeshare akabe1/frida-multiple-unpinning –U –f <package-name> 
