@@ -2,20 +2,26 @@
 
 You need a rooted android device to do this.
 
-1. sudo apt-get install android-tools-adb 
+1. Run: `sudo apt-get install android-tools-adb` 
+    
+    or follow steps here: https://www.xda-developers.com/install-adb-windows-macos-linux/
  
 
 2. Run the following commands:
 
-  `python -m pip install Frida` 
+  `python -m pip install Frida`
+  
   `python -m pip install objection`
+  
   `python -m pip install frida-tools`
 
               Or 
 
-  pip install Frida
-  pip install objection 
-  pip install frida-tools 
+  `pip install Frida`
+  
+  `pip install objection` 
+  
+  `pip install frida-tools`
 
 3. If  running on windows, make sure to include dirs containing frida.exe in PATH variables for system env.
 
