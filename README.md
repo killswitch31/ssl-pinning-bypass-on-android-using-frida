@@ -7,9 +7,9 @@ You need a rooted android device to do this.
 
 2. Run the following commands:
 
-  python -m pip install Frida 
-  python -m pip install objection 
-  python -m pip install frida-tools 
+  `python -m pip install Frida` 
+  `python -m pip install objection`
+  `python -m pip install frida-tools`
 
               Or 
 
