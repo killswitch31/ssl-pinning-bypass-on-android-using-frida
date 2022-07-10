@@ -1,4 +1,4 @@
-# ssl-pinning-bypass-using-frida
+# ssl-pinning-bypass-on-android-using-frida
 
 You need a rooted android device to do this.
 
