@@ -54,10 +54,8 @@ You need a rooted android device to do this.
 
     `adb shell chmod 755 /data/local/tmp/frida-server` 
 
-8. Then in a different terminal window run "adb shell" and do the following (do not close the terminal after done. Just minimize it) 
-
-    commands:  
-
+8. Then in a different terminal window run "adb shell" and do the following commands (do not close the terminal after done. Just minimize it) :  
+    
       `su` 
 
       `cd /data/local/tmp/` 
