@@ -9,25 +9,25 @@ You need a rooted android device to do this.
 
 2. Run the following commands:
 
-  `python -m pip install Frida`
+                `python -m pip install Frida`
   
-  `python -m pip install objection`
+                `python -m pip install objection`
   
-  `python -m pip install frida-tools`
+                `python -m pip install frida-tools`
 
-              Or 
+                            Or 
 
-  `pip install Frida`
+                `pip install Frida`
   
-  `pip install objection` 
+                `pip install objection` 
   
-  `pip install frida-tools`
+                `pip install frida-tools`
 
-3. If  running on windows, make sure to include dirs containing frida.exe in PATH variables for system env.
+3. If  running on windows, make sure to include dirs containing `frida.exe` in PATH variables for system env.
 
 4. To find out the arch version of the device, run following command: 
 
-    adb shell getprop ro.product.cpu.abi 
+    `adb shell getprop ro.product.cpu.abi` 
 
  
 
@@ -43,49 +43,47 @@ You need a rooted android device to do this.
     
     c. Email the "cacert.cer" file to a gmail address.
     
-    d. On your android device, open the email in Gmail app and opne the "cacert.cer" attachment.
+    d. On your android device, open the email in Gmail app and open the "cacert.cer" attachment.
     
     e. Enter you passcode, if prompted, and add the cert to the trusted root CA on device. Name it anything you want. 
 
 
 7. Run the following commands: 
 
-    adb push frida-server /data/local/tmp 
+    `adb push frida-server /data/local/tmp` 
 
-    adb shell chmod 755 /data/local/tmp/frida-server 
+    `adb shell chmod 755 /data/local/tmp/frida-server` 
 
 8. Then in a different terminal window run "adb shell" and do the following (do not close the terminal after done. Just minimize it) 
 
     commands:  
 
-      Su 
+      `su` 
 
-      Cd /data/local/tmp/ 
+      `cd /data/local/tmp/` 
 
-      ./frida-server & 
+      `./frida-server &` 
 
     Just minimize the terminal. 
-
- 
 
 9. You must have exported the burp cert in step 6(b). 
 
     Run the following command to push the burp cert to device: 
 
-    adb push cacert.der /data/local/tmp/cert-der.crt 
+    `adb push cacert.der /data/local/tmp/cert-der.crt` 
 
  
 
 10. Run the following command while app is open on the rooted android device: 
 
-    Command: frida-ps –U 
+    Command: `frida-ps –U` 
 
     Note down the package name from the list of running processes.
  
 
 11. If no errors in previous step, then run the following command: 
 
-    frida --codeshare akabe1/frida-multiple-unpinning –U –f <package-name>
+    `frida --codeshare akabe1/frida-multiple-unpinning –U –f <package-name>`
 
     Type “%resume” when the prompt appears. 
 
